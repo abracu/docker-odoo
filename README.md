@@ -8,7 +8,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10
-docker pull odoo
+docker pull odoo o docker pull odoo:12
 
 docker run -p 8069:8069 --name odoo --link db:db -t odoo
 ```
